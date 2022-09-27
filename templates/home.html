@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+ <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+     <title>Home</title>
+</head>
+ <style>
+      body
+      {
+          background-color: #f4ec78;
+      }
+    </style>
+<body>
+    <h1 class="text-info text-center">Welcome to our player</h1>
+     <h3 class="text-danger text-center">Songs</h3>
+    <table class="table table-hover">
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Play</th>
+            <th>Stop</th>
+        </tr>
+        {% for song in songs %}
+            <tr>
+                <td><p>{{ songs.index(song) }}</p></td>
+                <td><p>{{ song }}</p></td>
+                <td><a class="btn btn-outline-success" href="/play/{{ songs.index(song) }}">Play</a></td>
+                <td><a class="btn btn-outline-danger" href="/stop">Stop</a></td>
+            </tr>
+        {% endfor %}
+
+
+    </table>
+
+
+       <a class="btn btn-outline-danger" href="/users">Subscribers</a>
+
+
+</body>
+</html>

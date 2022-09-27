@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      body
+      {
+          background-image: url({{ url_for('static',filename='colours.jpg') }})
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>Login</title>
+     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+
+
+    <h1 class="text-info text-center">Login here</h1>
+<form method="post" >
+    {% with messages =get_flashed_messages()%}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endwith %}
+    <div class="rom">
+    <div class="col-7"></div>
+    <div class="col-7">
+
+        <input class="form-control" name="u_email" placeholder="Enter email "  type="email"><br><br>
+        <input class="form-control" name="u_password" placeholder="Enter password "  type="password"><br><br>
+     <input class="btn btn-info btn-block" name="u_Login" value=" Login "  type="submit"><br><br>
+
+           </div>
+    <div class="col-7"></div>
+</div>
+    </div>
+    <div class="col-7"></div>
+</div>
+
+
+    </form>
+         <a class="btn btn-outline-info"  href="/">Home</a>
+    <a  class="btn btn-outline-info" href="/sign up">Sign UP</a>
+
+
+
+ </body>
+
+</html>

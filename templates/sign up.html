@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GURU'S MP3 PLAYER</title>
+     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+ <style>
+      body
+      {
+          background-image: url({{ url_for('static',filename='register.jpg') }})
+      }
+    </style>
+<body>
+
+<div class="rom">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <h1 class="text-info text-center">SIGN UP HERE</h1>
+    <form method = "post" action="">
+        <input class="form-control" name="u_name" placeholder="Enter name "  type="text"><br><br>
+        <input class="form-control" name="u_email" placeholder="Enter email "  type="email"><br><br>
+        <input class="form-control" name="u_password" placeholder="Enter password "  type="password"><br><br>
+        <input class="btn btn-info btn-block" name="u_Sign up" value=" Sign up "  type="submit"><br><br>
+
+    </form>
+        {% with messeges = get_flashed_messages() %}
+         {%  for message in messages %}
+            <p>{message}</p>
+        {% endfor %}
+    {% endwith %}
+    <div class="rom">
+    <div class="col-7"></div>
+    <div class="col-7">
+
+        <a class="btn btn-outline-info"  href="/">Home</a>
+        <a class="btn btn-outline-info" href="/login">Login</a>
+
+      </div>
+    <div class="col-7"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+     <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<h1>Updating User</h1>
+{% with messages =get_flashed_messages()%}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endwith %}
+<form method="post" action="">
+    <input class="form-control" name="u_name" placeholder="Enter name "  type="text"><br><br>
+    <input value="{{ user.name }}" name="u_name" placeholder="Enter name "  type="text"><br><br>
+    <input value="{{ user.email }}" name="u_email" placeholder="Enter email "  type="email"><br><br>
+    <input value="{{ user.password }}" name="u_password" placeholder="Enter password "  type="password"><br><br>
+    <input name="u_Register" value=" Register "  type="submit"><br><br>
+     <input name="update" value=" Register "  type="submit"><br><br>
+<a href="/"><button>Home</button></a>
+<a href="/login"><button>Login</button></a>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    background-color: #4eda24;
+
+}
+h1{
+    color: #000000;
+}
+button{
+    background-color: #000000;
+    color: #ff2f40;
+    width: 100px;
+    height: 50px;
+    border: unset;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: #902730;
+    color: #000000;
+}

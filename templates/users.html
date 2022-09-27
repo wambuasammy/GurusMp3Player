@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+      body
+      {
+         background-color: #f4ec78;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>users</title>
+     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+
+
+<br>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    {% for user in users %}
+        <p>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td><a class="btn btn-outline-info" href="/update/{{ user.id }}">Update</a></td>
+            <td><a class="btn btn-outline-danger" href="/delete/{{ user.id }}">Delete</a></td>
+
+        </tr>
+    {% endfor %}
+    </table></br>
+
+    <a  class="btn btn-outline-info" href="/home">Back</a>
+
+
+</body>
+</html>
